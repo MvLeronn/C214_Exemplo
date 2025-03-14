@@ -1,17 +1,29 @@
 package org.example;
+import org.apache.commons.lang3.StringUtils;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+// Exemplo 1: Inverter uma string
+        String original = "Hello, World!";
+        String reversed = StringUtils.reverse(original);
+        System.out.println("String invertida: " + reversed);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        // Exemplo 2: Verificar se uma string é vazia
+        String emptyString = "";
+        if (StringUtils.isEmpty(emptyString)) {
+            System.out.println("A string está vazia.");
+        } else {
+            System.out.println("A string não está vazia.");
+        }
+
+        // Exemplo 3: Dividir uma string em partes
+        String sentence = "Apache Commons Lang is useful";
+        String[] words = StringUtils.split(sentence, ' ');
+        System.out.println("Palavras na frase:");
+        for (String word : words) {
+            System.out.println(word);
         }
     }
 }
